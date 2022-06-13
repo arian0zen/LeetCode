@@ -8,12 +8,13 @@ from array import array
 #     array.append(elem)
 
 
-array = [1,10,2,9]
+array = [7,10,4,3]
 
 array.sort()
 #print(array)
 n = len(array)
 mid = n//2
+#print (array[mid])
 #print(array[mid])   
 count = 0
 for element in range(n):
