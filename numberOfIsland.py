@@ -13,6 +13,7 @@ class Solution:
             columns = len(matrix[0])
             island = 0
             visited = []
+            #print(columns, rows)
             #print (visited)
             #print (rows, columns)
             
@@ -46,7 +47,7 @@ class Solution:
                         #print (visited)
                         '''
                         
-        def checkValidIsland(r, c, rows, columns, matrix):
+        def checkValidIsland(r, c, rows, columns, matrix): #r and c is co ordinate of the matrix as 00, 01, 02......
             if  (r>=0 and r < rows and
                 c>=0 and c < columns and
                 matrix[r][c] == '1'):
@@ -57,8 +58,8 @@ class Solution:
                         
             
         def dfs(r, c, rows, columns, matrix):
-                matrix[r][c] = '0'
-                #print (r,c)
+                matrix[r][c] = '0' #marking that co ordinate as 0 so we don't visit it again
+                #print (r,c) #uncomment this to see the r and c of the matrix
                
                 if checkValidIsland(r-1, c, rows, columns, matrix) == True:
                     dfs(r-1, c, rows, columns, matrix)
@@ -99,12 +100,13 @@ class Solution:
         print ("isnland: ", island)
     
     
-    grid= [ 
+    matrix= [ 
             ["0","1","1", "0", "1"],
             ["1","1","0", "1","1"],
             ["0","0","0", "1","0"],
             ["1","0","1", "0","1"],
+            ["1","1","0", "0","0"],
             ["1","1","0", "0","0"]]
 
-    numIslands(grid)
+    numIslands(matrix)
                                     
