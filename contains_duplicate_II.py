@@ -1,24 +1,30 @@
+from re import I
 from tkinter import N
 
 
-def containsNearbyDuplicate(arr):
+def containsNearbyDuplicate(arr, k):
     
-    
+    n = len(arr)
     hash_dict ={}
-    for i in range(len(arr)):
-        if arr[i] not in hash_dict:
-            hash_dict[i] = arr[i]
-            print (hash_dict)
-        else:
-            return i
+    for index, each in enumerate(arr):
+        if each in hash_dict and (abs(index - hash_dict[each])) <= k:
+            return True
+        hash_dict[each] = index
+    return False
+         
+        
+        
             
-    print (hash_dict)  
+    #print (hash_dict)  
     
     
     
     
     
-containsNearbyDuplicate([1,2,4,1,2,3])
+print(containsNearbyDuplicate([1,2,4,1,2,3], 2))
+# a = 5
+# b = 9
+# print(abs(a-b))
 
 
 
