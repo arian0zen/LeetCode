@@ -57,7 +57,7 @@ class Solution:
                 
                         
             
-        def dfs(r, c, rows, columns, matrix):
+        def dfs(r, c, rows, columns, matrix): #this is actually BFS call, i am stupid lol
                 matrix[r][c] = '0' #marking that co ordinate as 0 so we don't visit it again
                 #print (r,c) #uncomment this to see the r and c of the matrix
                
@@ -107,6 +107,23 @@ class Solution:
             ["1","0","1", "0","1"],
             ["1","1","0", "0","0"],
             ["1","1","0", "0","0"]]
+    
+    
+    '''
+    [ 
+            [0,1,1, 0, 1],
+            [1,1,0, 1,1],
+            [1,0,0, 1,0],
+            [1,0,1, 0,1],
+            [1,1,0, 0,0],
+            [1,1,0, 0,0]]
+            
+            
+            
+             [  [1,1,1,1,1,1,1,1,1,1],
+            [1,1,0,1,1,0,1,1,0,1],
+            [1,1,1,1,1,1,1,1,1,1]]
+    '''
 
     numIslands(matrix)
                                     
