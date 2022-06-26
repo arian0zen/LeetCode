@@ -29,7 +29,7 @@ def getmidelement(arr, l, r, mid):
     return None
 
 
-arr = [7,10,4,3]
+arr = [7,1,4,3]
 n = len(arr)
 mid = math.ceil(n/2)
 mid_value = getmidelement(arr, 0, n-1, mid)
