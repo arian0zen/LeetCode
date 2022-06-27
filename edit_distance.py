@@ -25,7 +25,7 @@ class Solution:
         return pointer_start(0,0)
     
     
-    print(minDistance("horse", "ros"))
+    print(minDistance("horsdse", "rods"))
     
     
     
