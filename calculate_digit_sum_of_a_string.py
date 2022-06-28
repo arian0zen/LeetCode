@@ -1,4 +1,6 @@
 def digitSum(s, k):
+    
+    
     if k >= len(s):
         return s
     

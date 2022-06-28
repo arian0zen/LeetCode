@@ -13,11 +13,7 @@ def maximumDifference(nums):
             difference = max(difference, abs(min_prefix - nums[i]))
         
     return difference    
-    
-    
-    
-    
-    
+
 nums = [7,1,5,4]
 print(maximumDifference(nums))    
 
