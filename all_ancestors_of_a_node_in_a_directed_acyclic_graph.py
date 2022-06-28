@@ -3,21 +3,12 @@ import re
 
 
 def getAncestors(n, edges):
-    # reversed_array = edges
-    # for i in range(len(edges)):
-    #     reversed_array[i] = reversed_array[i][::-1]
-    # # reversed_array = reversed_array[::-1]
-    # reversed_array = sorted(reversed_array)
-    # print (reversed_array)
+    
     edges_reverse = [[] for _ in range(n)]
     for a,b in edges:
         # print (a,b)
         edges_reverse[b].append(a)
-        # print (edges_reverse)
-    # print (edges_reverse)
-    # print (edges_reverse[6])
-   
-    #dfs function
+        
     def dfs(index):
         result = set()
         for element in edges_reverse[index]:
