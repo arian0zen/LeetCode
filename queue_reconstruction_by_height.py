@@ -1,27 +1,18 @@
+from operator import le
 from queue import Empty
 
 
 def reconstructQueue(people):
-    queue = [[-1,-1]]*len(people)
-    people.sort()
-        
-    for i,j in people: 
-            
-        greater_ele = 0
-        place_pos = 0
-                        
-        while greater_ele<j:
-            if queue[ place_pos ][0] >= i or queue[place_pos ][0] == -1:
-                place_pos += 1
-                greater_ele += 1
-            else:
-                place_pos += 1
-            
-        while queue[place_pos][0] != -1:
-            place_pos+=1
-            
-        queue[ place_pos ] = [i,j]
+    queue = [[]]
+    people.sort(key=lambda x: [-x[0], x[1]])
+    # people.sort(key = lambda x: x[1])
+    # print (people)
+    for i in range(len(people)):
+        queue.insert((people[i][1]), people[i])
+        # print (queue)
+    queue.pop()
     return queue
+    
     
     
     
