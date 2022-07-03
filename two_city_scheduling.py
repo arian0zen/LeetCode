@@ -20,12 +20,13 @@ def twoCitySchedCost(cost):
     for i in range(len(profit)):
         
         if (cost[profit[i][1]][1] <= cost[profit[i][1]][0] and city_b < n//2) or city_a == n//2:
-            
+            #(if it can to to b and also b in empty then) or a is full, we forcefully push them to b
             min_cost += cost[profit[i][1]][1]
             city_b += 1
             print(cost[profit[i][1]][1],  "space b:", city_b)
             
-        elif city_a < n//2 :
+        elif city_a < n//2 : #else if, it can not go to b and also a is empty then push to a!! but if a is full the above conditions satisfies that means it goes b.
+            #but is b is full, then all remaining all enters a until its full
             
             min_cost += cost[profit[i][1]][0]
             city_a += 1
