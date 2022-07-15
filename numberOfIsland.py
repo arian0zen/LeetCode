@@ -1,4 +1,5 @@
 import collections
+from itertools import count
 from nntplib import GroupInfo
 
 
@@ -12,7 +13,7 @@ class Solution:
             rows = len(matrix)
             columns = len(matrix[0])
             island = 0
-            visited = []
+            
             #print(columns, rows)
             #print (visited)
             #print (rows, columns)
@@ -50,18 +51,20 @@ class Solution:
         def checkValidIsland(r, c, rows, columns, matrix): #r and c is co ordinate of the matrix as 00, 01, 02......
             if  (r>=0 and r < rows and
                 c>=0 and c < columns and
-                matrix[r][c] == '1'):
+                matrix[r][c] == 1):
                 return True
             else: 
                 return False
                 
                         
-            
+        max_counter = 0   
         def dfs(r, c, rows, columns, matrix): #this is actually BFS call, i am stupid lol
-                matrix[r][c] = '0' #marking that co ordinate as 0 so we don't visit it again
+                matrix[r][c] = 0 #marking that co ordinate as 0 so we don't visit it again
                 #print (r,c) #uncomment this to see the r and c of the matrix
+                nonlocal counter
+                counter += 1
                
-                if checkValidIsland(r-1, c, rows, columns, matrix) == True:
+                if checkValidIsland(r-1, c, rows, columns, matrix) == True: #this is the recursion base case
                     dfs(r-1, c, rows, columns, matrix)
                     
                 if checkValidIsland(r+1, c, rows, columns, matrix) == True:
@@ -85,28 +88,25 @@ class Solution:
            
             for c in range(columns):
                 
-                if matrix[r][c] == "1" :
+                if matrix[r][c] == 1 :
                     island = island + 1
                     
                     
                     #bfs(r, c)
                     #print ("The count of islands is: ", island, r, c)
                     
+                    counter = 0
                     dfs(r,c, rows, columns, matrix)
+                    print(counter)
+                    max_counter = max(max_counter, counter)
                     
                     
                     
-        #print(matrix) 
-        print ("isnland: ", island)
+        print(matrix) 
+        print ("isnland: ", island, max_counter)
     
     
-    matrix= [ 
-            ["0","1","1", "0", "1"],
-            ["1","1","0", "1","1"],
-            ["0","0","0", "1","0"],
-            ["1","0","1", "0","1"],
-            ["1","1","0", "0","0"],
-            ["1","1","0", "0","0"]]
+    matrix= [[0,0,1,0,0,0,0,1,0,0,0,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,1,1,0,1,0,0,0,0,0,0,0,0],[0,1,0,0,1,1,0,0,1,0,1,0,0],[0,1,0,0,1,1,0,0,1,1,1,0,0],[0,0,0,0,0,0,0,0,0,0,1,0,0],[0,0,0,0,0,0,0,1,1,1,0,0,0],[0,0,0,0,0,0,0,1,1,0,0,0,0]]
     
     
     '''
