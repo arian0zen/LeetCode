@@ -10,6 +10,7 @@ def candy(ratings):
                min_candy[i] = min_candy[i+1] + 1
     return sum(min_candy)
             
+    
             
         # elif ratings[i] > ratings[i+1]:
         #     min_candy+= 1
