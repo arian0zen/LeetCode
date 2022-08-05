@@ -17,6 +17,7 @@ def digitSum(s, k):
     return digitSum(rounded_array, k)
     
     
+    
  
 s = "11111222223"
 k = 3  
