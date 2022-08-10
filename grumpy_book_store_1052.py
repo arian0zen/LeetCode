@@ -5,7 +5,7 @@ def maxSatisfied(customers, grumpy, minutes):
         if (grumpy[each] == 0):
             sum += customers[each]
         
-    #print(sum)
+
     
     satisfaction = sum
     #setting up start and end pointers for the next loop
