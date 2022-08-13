@@ -28,3 +28,5 @@ print(candy(ratings))
 # 1.first we are gonna check if i > i-1 (prev), if it is greater then increase one from its previous 's value
 # 2.then a little trick, then we iterate in reverse to check if i > i+1 (for array of len 6, i = 5 4 3 2 1 0; when i = 5 we compare it with 6th elem, so basically we are cheking the front neighbour of the i th element) so if i is greater than i+1 th element as well, we change its candy count to min_candy[i+1] + 1)
 # 3.in that way we will successfully compare an element with its previous and after's value! and change its candy count along the way..
+
+
