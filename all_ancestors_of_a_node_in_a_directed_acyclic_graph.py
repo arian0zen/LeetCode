@@ -2,6 +2,7 @@ from array import array
 import re
 
 
+
 def getAncestors(n, edges):
     
     edges_reverse = [[] for _ in range(n)]
