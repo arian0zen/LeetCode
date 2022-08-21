@@ -7,6 +7,7 @@ def firstMissingPositive(nums):
             a = nums.index(i)
             break
         
+
     del nums[0:a]
     nums.insert(0, 0)
     nums = set(nums)
