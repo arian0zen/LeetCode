@@ -6,7 +6,7 @@ Return the maximum difference. If no such i and j exists, return -1.
 
  
 
-Example 1:
+Example 01:
 
 Input: nums = [7,1,5,4]
 Output: 4
