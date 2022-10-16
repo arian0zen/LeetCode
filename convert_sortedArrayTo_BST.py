@@ -13,4 +13,4 @@ def convertToBST(nums):
 nums = [-10,-3,0,5,9]
 print(convertToBST(nums))
 
-#return traversal of the BST
+#return the traversal of the BST

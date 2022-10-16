@@ -4,6 +4,7 @@ def minimumLines(stockPrices):
     #print(len(stockPrices))
     if len(stockPrices) == 1:
         return 0
+
     # if (stockPrices[1][0] == 500000000 and stockPrices[1][1] == 499999999) or (stockPrices[1][0] == 499999999 and stockPrices[1][1] == 500000000) :
     #         return 2 # this was just because one test case was getting error because of python's deciman error [[1,1],[500000000,499999999],[1000000000,999999998]]
     # print(stockPrices[0][1]) and [[1,1],[499999999,500000000],[999999998,1000000000]]
