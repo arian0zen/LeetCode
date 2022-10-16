@@ -12,3 +12,4 @@ def minMovesToSeat(seats, students):
 seats = [3,1,5]
 students = [2,7,4]
 print(minMovesToSeat(seats, students))
+# Output: 4
