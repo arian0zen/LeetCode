@@ -18,7 +18,7 @@ print(findDisappearedNumbers([4,3,2,7,8,2,3,1]))
 
 
 
-# a = []          
+# a = []          an array
 # for i in range(len(hash_dict)):
 #     if hash_dict[i] == 0:
 #         a.append(i)
