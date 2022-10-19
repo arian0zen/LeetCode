@@ -8,7 +8,8 @@ def canJump(nums):
             return False
         dp[i] = max(dp[i-1]-1, nums[i])
             
-    return True
+    return True #ends here
+
 
 nums = [2,3,1,1,4]
 print(canJump(nums))
