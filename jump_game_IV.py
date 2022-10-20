@@ -4,7 +4,7 @@ You are initially standing at index 0. In one move, you can jump at most k steps
 
 You want to reach the last index of the array (index n - 1). Your score is the sum of all nums[j] for each index j you visited in the array.
 
-Return the maximum score you can get.
+Return the maximum score you can get
 Input: nums = [1,-1,-2,4,-7,3], k = 2
 Output: 7
 Explanation: You can choose your jumps forming the subsequence [1,-1,4,3] (underlined above). The sum is 7.'''
