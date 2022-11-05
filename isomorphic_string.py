@@ -24,4 +24,4 @@ a = "badc"
 b = "baba"
 print(isIsomorphic(a,b))
 
-#Python || faster than 99.21% || 30ms
+#Python || faster than 99.21% || 30~50ms
