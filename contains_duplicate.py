@@ -32,7 +32,7 @@ Given an integer array nums, return true if any value appears at least twice in 
 
  
 
-Example 1:
+Example 01:
 
 Input: nums = [1,2,3,1]
 Output: true
